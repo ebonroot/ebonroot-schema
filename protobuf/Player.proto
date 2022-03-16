@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package EbonRoot.Schema.Protobuf;
+
+message Player {
+  enum GameMode {
+    survival = 0;
+    creative = 1;
+    hardcore = 2;
+    adventure = 3;
+  }
+
+  string id = 1;
+  string name = 2;
+  GameMode gamemode = 3;
+  // posix time in seconds
+  uint64 last_seen = 4;
+  repeated Inventory carried = 5;
+  repeated Inventory worn = 6;
+  repeated Inventory hotbar = 7;
+}
+
+message Inventory {
+  // TBD: we could enum this...
+  string type = 1;
+  // not sure if we have UUIDs for each inventory type
+  string id = 2;
+  // where in an ordered set does this item sit?  I.e. position 3 in the hotbar...
+  uint32 position = 3;
+  uint32 quantity = 4;
+}

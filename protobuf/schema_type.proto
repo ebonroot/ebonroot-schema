@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package EbonRoot.Schema.Protobuf;
+
+enum SchemaType {
+  player = 0;
+}
