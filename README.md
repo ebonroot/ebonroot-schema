@@ -1,6 +1,18 @@
 Standard Protobuf structs for Minecraft objects, used in a message bus with
 EbonRoot.com (over ZMQ DEALER/ROUTER socket).
 
+<< WIP >>
+
+# Structures
+
+`Envelope` is an outer wrapper for all other types.  Everything should embed
+from that point.
+
+`Query` follows a GraphQL like approach (query or mutation).  Still in-design,
+but we will need to determine how to scope this. It's not efficient to keep
+the query string like in GraphQL, is there a way we can make the request in a
+more focused manner.
+
 # Java Usage
 
 TBD
