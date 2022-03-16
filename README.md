@@ -1,6 +1,9 @@
 Standard Protobuf structs for Minecraft objects, used in a message bus with
 EbonRoot.com (over ZMQ DEALER/ROUTER socket).
 
+
+https://developers.google.com/protocol-buffers/docs/proto3
+
 << WIP >>
 
 # Structures
