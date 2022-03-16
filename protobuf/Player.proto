@@ -4,10 +4,10 @@ package EbonRoot.Schema.Protobuf;
 
 message Player {
   enum GameMode {
-    survival = 0;
-    creative = 1;
-    hardcore = 2;
-    adventure = 3;
+    SURVIVAL = 0;
+    CREATIVE = 1;
+    HARDCORE = 2;
+    ADVENTURE = 3;
   }
 
   string id = 1;
@@ -18,6 +18,14 @@ message Player {
   repeated Inventory carried = 5;
   repeated Inventory worn = 6;
   repeated Inventory hotbar = 7;
+  double money = 8;
+  map<string, Position> homes = 9;
+  // settings
+  // timestamps
+  // homes
+  // warps?
+  // lands? ~ claims
+  // perms
 }
 
 message Inventory {
@@ -28,4 +36,14 @@ message Inventory {
   // where in an ordered set does this item sit?  I.e. position 3 in the hotbar...
   uint32 position = 3;
   uint32 quantity = 4;
+}
+
+message Position {
+  // server?
+  string world_id = 1;
+  double x = 2;
+  double y = 3;
+  double z = 4;
+  double yaw = 5;
+  double pitch = 6;
 }
