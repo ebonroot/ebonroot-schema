@@ -20,13 +20,39 @@ message Player {
   repeated Inventory hotbar = 7;
   double money = 8;
   map<string, Position> homes = 9;
-  // settings
+  map<string, Position> beds = 9;
+  repeated Effect effects = X;
+  // settings { }
+  // limits? { claims, camps, etc }
   // timestamps
-  // homes
   // warps?
   // lands? ~ claims
-  // perms
+  // group_perms perms
+  // repeated GroupPerms
+  // map<string, Perm> perms = X;
+  double health = X;
+  double health_scale = X;
+  double max_health = X;
+  uint32 food = X;
+  string saturation = X;
+  uint32 air = X;
+  uint32 max_air = X;
 }
+
+message Effect {
+  name
+  expires_at
+}
+
+message Rank {
+  track_id
+  level_id
+  total_xp
+}
+// exp           | float(60,30)     | NO   |     | NULL    |                |
+// exp_to_level  | int(10)          | NO   |     | NULL    |                |
+// total_exp     | int(10)          | NO   |     | NULL    |                |
+// exp_lvl       | int(10)          | NO   |     | NULL    |                |
 
 message Inventory {
   // TBD: we could enum this...

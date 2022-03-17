@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package EbonRoot.Schema.Protobuf;
+
+message Shop {
+  string id = 1;
+}

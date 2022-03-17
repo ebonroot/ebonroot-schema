@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package EbonRoot.Schema.Protobuf;
 
-import "schema_type.proto";
-import "key_value.proto";
+import "ref/schema_type.proto";
+import "ref/key_value.proto";
 
 // reflecting a Minecraft event
 message Event {
